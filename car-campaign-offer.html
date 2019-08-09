@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="js flexbox canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Page Title -->
+    <title>The Travel Square</title>
+    
+    <!-- Meta Tags -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Travel Beans">
+    <meta name="description" content="">
+    <meta name="distribution" content="global">
+    <meta name="country" content="india">
+    <meta name="copyright" content="The Travel Square">
+    <meta name="revisit-after" content="1 hour">
+    <meta name="designer" content="The Travel Square">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta name="rating" content="general">
+    <meta name="publisher" content="The Travel Square">
+
+    <meta property="og:title" content="The Travel Square">
+    <meta property="og:description" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta property="og:image" content="">
+  
+    <meta name="twitter:card" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+  
+    <meta name="keywords" content="The Travel Square is a Unique B2B Platform For Travel Agents to Get Best Quotes For Their Travel Booking Leads . Our Network is a Profesional B2B Connection of More Than 5000+ Travel Agents Around the Globe at More Than 250+ Destinations in the World . The Travel Square is Simple to Use , Efficient and Cost Savvy , Which Can Make More Margins in Travel Sales and Make Travel Agents Earn 150% More Profits.">
+    <meta name="format-detection" content="7428558566">
+    
+	
+	
+	<link rel="shortcut icon" href="" type="image/x-icon">
+    
+	<script>
+
+$(document).ready(function() {
+  // Gets the video src from the data-src on each button
+
+  var $videoSrc;
+  $(".video-btn").click(function() {
+    $videoSrc = $(this).data("src");
+  });
+  console.log($videoSrc);
+
+  // when the modal is opened autoplay it
+  $("#myModal").on("shown.bs.modal", function(e) {
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    $("#video").attr(
+      "src",
+      $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+    );
+  });
+
+  // stop playing the youtube video when I close the modal
+  $("#myModal").on("hide.bs.modal", function(e) {
+    // a poor man's stop video
+    $("#video").attr("src", $videoSrc);
+  });
+
+  // document ready
+});
+
+
+
+
+
+</script>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}	
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>	
+	
+	<style>
+body {
+  margin: 2rem;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+</style>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('images/the-travel-square-white-banner.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 35px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 35px;
+}
+
+
+
+.middleb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middled {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middlec {
+  position: absolute;
+  top: 55%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+	
+    <!-- Theme Styles -->
+    <link rel="stylesheet" href="files/bootstrap.min.css">
+    <link rel="stylesheet" href="files/font-awesome.min.css">
+    <link href="files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="files/animate.min.css">
+    
+	
+    <!-- Main Style -->
+    <!--<link id="main-style" rel="stylesheet" href="css/style.css">-->
+    <script type="text/javascript">
+        var mainStyle = "style.css";
+        if (typeof localStorage != "undefined") {
+            var colorSkin = localStorage.getItem("colorSkin");
+            if (colorSkin != null) {
+                mainStyle = "style-" + colorSkin + ".css";
+            }
+        }
+        document.write('<link id="main-style" rel="stylesheet" href="css/' + mainStyle + '">');
+    </script><link id="main-style" rel="stylesheet" href="files/style-light-yellow.css">
+    
+    <!-- Updated Styles -->
+    <link rel="stylesheet" href="files/updates.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="files/custom.css">
+    
+    <!-- Responsive Styles -->
+    <link rel="stylesheet" href="files/responsive.css">
+  
+  <script>
+var elem = document.getElementById("myvideo");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+  
+</head>
+
+<body>
+
+	<div class="bgimg" id="section1">
+  <div class="topleft">
+  <br	>
+    <img src="images/the-travel-square-india-logo.png">
+  </div>
+    <div class="middleb">
+   <img src="images/car-campaign-image.png" class="img-responsive animated pull-left" data-animation-type="fadeIn" data-animation-duration="1" data-animation-delay="0">
+  </div>
+  <div class="middled">
+	<a href="#section2"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class=" white btn-small animated pull-left" data-animation-type="fadeIn" data-animation-duration="1" data-animation-delay="0"><font color="black" size="4"><small>ENTER CAR NUMBER</small></font></a>
+  </div>
+  
+  <div class="bottomleft">
+  <font color="black"><p><a href=""><b>Got , The Travel Square Promotional Sticker on Your Car , Here's a Lucky Offer For You !</b></a></p></font>
+  
+  </div>
+	</div>
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/the-travel-square-india-logo.png" alt="Avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Enter Name</b></label>
+      <input type="text" placeholder="Enter Your Name" name="uname" required>
+
+      <label for="psw"><b>Car Number</b></label>
+      <input type="password" placeholder="Enter Your Car Number Where You Found the Sticker" name="psw" required>
+	  
+	   <label for="psw"><b>Contact Number</b></label>
+      <input type="password" placeholder="Enter Contact Number" name="psw" required>
+	  
+	   <label for="psw"><b>Mail ID</b></label>
+      <input type="password" placeholder="Enter Mail ID" name="psw" required>
+        
+      <button class="button sky-blue1 uppercase" type="submit">Submit Details</button>
+      
+    </div>
+	
+
+  </form>
+</div>
+
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="files/jquery-1.11.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.noconflict.js.download"></script>
+    <script type="text/javascript" src="files/modernizr.2.7.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery-migrate-1.2.1.min.js.download"></script>
+    <script type="text/javascript" src="files/jquery.placeholder.js.download"></script>
+    <script type="text/javascript" src="files/jquery-ui.1.10.4.min.js.download"></script>
+	
+	    
+    <script type="text/javascript" src="js/js"></script>
+    <script type="text/javascript" src="js/gmap3.min.js.download"></script>
+    <script type="text/javascript" src="js/theme-scripts.js.download"></script>
+    
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="files/bootstrap.js.download"></script>
+
+    <!-- Flex Slider -->
+    <script type="text/javascript" src="files/jquery.flexslider-min.js.download"></script>
+    
+    <!-- parallax -->
+    <script type="text/javascript" src="files/jquery.stellar.min.js.download"></script>
+    
+    <!-- waypoint -->
+    <script type="text/javascript" src="files/waypoints.min.js.download"></script>
+
+    <!-- load page Javascript -->
+    <script type="text/javascript" src="files/theme-scripts.js.download"></script>
+    <script type="text/javascript" src="files/scripts.js.download"></script>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Sep 1, 2019 12:01:01").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+
+
+
+</body></html>
